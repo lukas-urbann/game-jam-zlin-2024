@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Value Identifier", menuName = "Custom Objects/Value Identifier")]
 public class ValueIdentifier : ScriptableObject
 {
-
+    public float Value;
 }

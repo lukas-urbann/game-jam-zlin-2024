@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LinkMaster : MonoBehaviour
+namespace Game
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Use to link objects with other object's children.
+    /// </summary>
+    public class LinkMaster : MonoBehaviour
     {
-        
-    }
+        public GameObject InitialLink;
+        private ILinkable[] links;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnEnable()
+        {
+            links = GetComponentsInChildren<ILinkable>();
+
+            if (!InitialLink)
+                InitialLink = this.gameObject;
+
+            foreach (ILinkable link in links)
+                link.Link(InitialLink);
+        }
     }
 }

@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ILinkable : MonoBehaviour
+namespace Game
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Use to connect child objects with the root parent.
+    /// </summary>
+    public interface ILinkable
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Link(GameObject linkedObject) => SaveLinkReference(linkedObject);
+        public void SaveLinkReference(GameObject masterObject);
     }
 }
