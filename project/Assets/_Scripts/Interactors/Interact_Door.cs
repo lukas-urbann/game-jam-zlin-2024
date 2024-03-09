@@ -1,27 +1,23 @@
+using Game.Systems;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
-    public interface IInteractable
+    public class Interact_Door : MonoBehaviour, IInteractable, ILinkable
     {
-        bool InteractableSober { get; set; }
-        bool InteractableDrunk { get; set; }
-        List<ItemType> RequiredItemsToInteract {  get; }
-        public void InteractHighlight();
-        public void Interact();
-    }
-
-    /*
-     * 
-     * 
-     *
-     *
-     *
         private InventoryHolder inventory;
+        [SerializeField] GameObject highlightObject;
+
+        [SerializeField] bool interactableSober = false;
+        [SerializeField] bool interactableDrunk = false;
+        public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
+        public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
         public List<ItemType> RequiredItemsToInteract { get { return requiredItemsToInteract; } }
         [SerializeField] List<ItemType> requiredItemsToInteract = new();
-    
+
         public UnityEvent InteractionWithoutKey;
         public UnityEvent InteractionWithKey;
 
@@ -29,6 +25,7 @@ namespace Game
         {
             if (requiredItemsToInteract.Count <= 0)
             {
+                StartCoroutine(Open());
                 InteractionWithKey?.Invoke();
                 return;
             }
@@ -37,6 +34,7 @@ namespace Game
                 foreach (var item in requiredItemsToInteract)
                 {
                     inventory.RemoveFromInventory(item);
+                    StartCoroutine(Open());
                     InteractionWithKey?.Invoke();
                 }
             }
@@ -53,8 +51,17 @@ namespace Game
                 if (!inventory.CheckForItem(item))
                     return false;
             }
+
             return true;
         }
-     * 
-     */
+
+        private IEnumerator Open()
+        {
+            yield return new WaitForEndOfFrame();
+            InteractionWithKey?.Invoke();
+        }
+
+        public void InteractHighlight() => highlightObject.SetActive(!highlightObject.activeSelf);
+        public void SaveLinkReference(GameObject masterObject) => inventory = masterObject.GetComponent<InventoryHolder>();
+    }
 }
