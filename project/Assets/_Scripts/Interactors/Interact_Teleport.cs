@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Interactors
@@ -12,6 +13,8 @@ namespace Game.Interactors
         [SerializeField] bool interactableDrunk = false;
         public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
         public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
+        public List<ItemType> RequiredItemsToInteract { get { return requiredItemsToInteract; } }
+        [SerializeField] List<ItemType> requiredItemsToInteract = new();
 
         public void Interact()
         {

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Game
@@ -11,6 +12,12 @@ namespace Game
 
         public void DestroySelf()
         {
+            StartCoroutine(DestroySelfRoutine());
+        }
+
+        private IEnumerator DestroySelfRoutine()
+        {
+            yield return new WaitForEndOfFrame();
             Destroy(gameObject);
         }
     }

@@ -1,5 +1,6 @@
 using Game.Systems;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,42 +10,55 @@ namespace Game
     {
         private InventoryHolder inventory;
         [SerializeField] GameObject highlightObject;
-        public ItemType key;
 
         [SerializeField] bool interactableSober = false;
         [SerializeField] bool interactableDrunk = false;
         public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
         public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
+        public List<ItemType> RequiredItemsToInteract { get { return requiredItemsToInteract; } }
+        [SerializeField] List<ItemType> requiredItemsToInteract = new();
 
         public UnityEvent openWithoutKey;
         public UnityEvent openWithKey;
 
         public void Interact()
         {
-            if (key == null)
+            if (requiredItemsToInteract.Count <= 0)
+            {
                 StartCoroutine(Open());
-
-            Debug.Log("test1");
-
-            if (inventory)
-                if (inventory.CheckForItem(key))
+                openWithKey?.Invoke();
+                return;
+            }
+            else if (CheckForAllItems())
+            {
+                foreach (var item in requiredItemsToInteract)
                 {
-                    inventory.RemoveFromInventory(key);
-                    StartCoroutine(Open() );
-                    Debug.Log("test2");
+                    inventory.RemoveFromInventory(item);
+                    StartCoroutine(Open());
+                    openWithKey?.Invoke();
                 }
-                else
-                {
-                    openWithoutKey?.Invoke();
-                    Debug.Log("test3");
-                }
+            }
+            else
+            {
+                openWithoutKey?.Invoke();
+            }    
+        }
+
+        private bool CheckForAllItems()
+        {
+            foreach (var item in requiredItemsToInteract)
+            {
+                if (!inventory.CheckForItem(item))
+                    return false;
+            }
+
+            return true;
         }
 
         private IEnumerator Open()
         {
             yield return new WaitForEndOfFrame();
             openWithKey?.Invoke();
-            Debug.Log("test4");
         }
 
         public void InteractHighlight() => highlightObject.SetActive(!highlightObject.activeSelf);

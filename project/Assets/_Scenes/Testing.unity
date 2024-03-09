@@ -783,7 +783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.01, y: 0.88}
+  m_AnchoredPosition: {x: 2.637, y: 1.322}
   m_SizeDelta: {x: 1.25817, y: 0.45511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1916338898
@@ -1785,6 +1785,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2756756779271581391, guid: 4ac7d4990f5e4f747ab82f8ddfaf3a23, type: 3}
+      propertyPath: requiredItemsToInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756756779271581391, guid: 4ac7d4990f5e4f747ab82f8ddfaf3a23, type: 3}
+      propertyPath: requiredItemsToInteract.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e293e859e360e214ab2a03881cf01349, type: 2}
     - target: {fileID: 3021667481065352256, guid: 4ac7d4990f5e4f747ab82f8ddfaf3a23, type: 3}
       propertyPath: m_Name
       value: DoorInteractable
