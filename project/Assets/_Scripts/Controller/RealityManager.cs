@@ -21,8 +21,8 @@ namespace Game
         /// </summary>
         public void Switch()
         {
-            Debug.Log("Reality switch invoked.");
             realityValueReference.Value = realityValueReference.Value == 1 ? -1 : 1;
+            Debug.Log("Reality switch invoked. Value: " + realityValueReference.Value);
         }
     }
 }

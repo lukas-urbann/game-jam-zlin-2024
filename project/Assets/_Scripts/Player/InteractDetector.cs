@@ -6,25 +6,25 @@ namespace Game.Player
 {
     public class InteractDetector : MonoBehaviour
     {
-        private List<IInteractable> InteractablesInSight = new();
+        public List<IInteractable> InteractablesInSight = new();
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.TryGetComponent(out IInteractable interactable))
             {
                 interactable.InteractHighlight();
-                InteractablesInSight.Add(interactable);
+                if (!interactable.TouchInteraction) InteractablesInSight.Add(interactable);
             }
         }
         private void OnTriggerExit2D(Collider2D other)
         {
             if (other.gameObject.TryGetComponent(out IInteractable interactable))
             {
-                interactable.InteractHighlight();
-                InteractablesInSight.Remove(interactable);
+                if (!interactable.TouchInteraction) interactable.InteractHighlight();
+                if (!interactable.TouchInteraction) InteractablesInSight.Remove(interactable);
             }
         }
-
+        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))

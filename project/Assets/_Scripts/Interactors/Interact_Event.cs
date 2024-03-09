@@ -16,6 +16,10 @@ namespace Game.Interactors
         public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
         public List<ItemType> RequiredItemsToInteract { get { return requiredItemsToInteract; } }
         public ValueIdentifier CustomIdentifier { get { return customIdentifier; } }
+
+        public bool touchInteraction = false;
+        public bool TouchInteraction { get { return touchInteraction; } }
+
         public ValueIdentifier customIdentifier;
 
         [SerializeField] List<ItemType> requiredItemsToInteract = new();
@@ -32,7 +36,6 @@ namespace Game.Interactors
 
             if (requiredItemsToInteract.Count <= 0)
             {
-                StartCoroutine(Open());
                 InteractionWithItems?.Invoke();
                 return;
             }
@@ -41,7 +44,6 @@ namespace Game.Interactors
                 foreach (var item in requiredItemsToInteract)
                 {
                     inventory.RemoveFromInventory(item);
-                    StartCoroutine(Open());
                     InteractionWithItems?.Invoke();
                 }
             }
@@ -62,13 +64,14 @@ namespace Game.Interactors
             return true;
         }
 
-        private IEnumerator Open()
+        public void InteractHighlight()
         {
-            yield return new WaitForEndOfFrame();
-            InteractionWithItems?.Invoke();
+            highlightObject.SetActive(!highlightObject.activeSelf);
+
+            if (touchInteraction)
+                Interact();
         }
 
-        public void InteractHighlight() => highlightObject.SetActive(!highlightObject.activeSelf);
         public void SaveLinkReference(GameObject masterObject) => inventory = masterObject.GetComponent<InventoryHolder>();
     }
 }
