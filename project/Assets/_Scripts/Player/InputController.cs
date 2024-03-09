@@ -16,12 +16,14 @@ namespace Game.Player
         [Header("Variable References")]
         public VariableReference walkSpeed;
         public VariableReference gravitySpeed;
+        public Animator anim;
 
         //Private stuff
         private Rigidbody2D rb;
         private CapsuleCollider2D col;
         private Transform pos;
         private float direction = 0;
+        public bool isWalking => direction != 0 && HasInput;
 
         //Cool stuff
         private bool HasInput => (Input.GetAxis("Horizontal") != 0);
@@ -48,6 +50,8 @@ namespace Game.Player
 
         private void DoMovement()
         {
+            anim.SetBool("walking", isWalking);
+
             if (HasInput && Grounded)
             {
                 direction = GetInput;

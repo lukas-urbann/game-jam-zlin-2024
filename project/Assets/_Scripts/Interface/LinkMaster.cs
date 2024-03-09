@@ -10,20 +10,22 @@ namespace Game
     {
         public GameObject InitialLink;
         private ILinkable[] links;
-        public bool LinkWithPlayerReferenceInstead = false;
 
-        private void OnEnable()
+        private void Start()
         {
             links = GetComponentsInChildren<ILinkable>();
 
             if (!InitialLink)
             {
-                InitialLink = this.gameObject;
-
-                if (LinkWithPlayerReferenceInstead)
-                    InitialLink = PlayerReference.Instance.Player;
+                InitialLink = PlayerReference.Instance.Player;
             }
 
+            foreach (ILinkable link in links)
+                link.Link(InitialLink);
+        }
+
+        public void ChciDomu()
+        {
             foreach (ILinkable link in links)
                 link.Link(InitialLink);
         }

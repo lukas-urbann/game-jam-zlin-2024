@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 1200148505242973529}
   - component: {fileID: 5267426171628351406}
   - component: {fileID: 3411905231713110033}
-  - component: {fileID: 3822166275339309133}
   - component: {fileID: 6849874696274498201}
   - component: {fileID: 6687787827448024588}
   - component: {fileID: 8064117541550595377}
@@ -135,7 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialLink: {fileID: 6977405556261110529}
-  LinkWithPlayerReferenceInstead: 0
 --- !u!114 &3411905231713110033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,21 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUpdateEvent: {fileID: 11400000, guid: ef1d9633446ab6e4f9cbdc1c42c35bef, type: 2}
   Items: []
---- !u!114 &3822166275339309133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6977405556261110529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906c9f56e1d81774a8e511dd83c7e1c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 6977405556261110529}
-  PlayerNormal: {fileID: 0}
-  PlayerDrunk: {fileID: 0}
 --- !u!114 &6849874696274498201
 MonoBehaviour:
   m_ObjectHideFlags: 0

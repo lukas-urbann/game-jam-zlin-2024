@@ -7,7 +7,7 @@ namespace Game.Interactors
     {
         [SerializeField] GameObject highlightObject;
         public Transform PositionToTeleport;
-        private GameObject LinkedObject;
+        public GameObject LinkedObject;
 
         [SerializeField] bool interactableSober = false;
         [SerializeField] bool interactableDrunk = false;
@@ -19,19 +19,42 @@ namespace Game.Interactors
         public bool touchInteraction = false;
         public bool TouchInteraction { get { return touchInteraction; } }
 
+        public bool canInteract = true;
+        public void Enable()
+        {
+            canInteract = true;
+        }
+        public void Disable()
+        {
+            canInteract = false;
+        }
+
         public void Interact()
         {
             if (!interactableDrunk && !interactableSober) return;
-            else if (!interactableSober && CustomIdentifier.Value == -1) return;
-            else if (!interactableDrunk && CustomIdentifier.Value == 1) return;
+            else if (!interactableSober && CustomIdentifier.Value == 1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == -1) return;
+
+            if (!canInteract) return;
 
             if (!LinkedObject) return;
             LinkedObject.transform.position = PositionToTeleport.transform.position;
         }
         public void SaveLinkReference(GameObject masterObject) => LinkedObject = masterObject;
-        public void InteractHighlight() => highlightObject.SetActive(!highlightObject.activeSelf);
-    
-        public void ReplaceLinkWithDrunkCharacter() => LinkedObject = PlayerReference.Instance.PlayerDrunk;
-        public void ReplaceLinkWithNormalCharacter() => LinkedObject = PlayerReference.Instance.PlayerNormal;
+        public void InteractHighlight()
+        {
+            if (!canInteract) return;
+            highlightObject.SetActive(!highlightObject.activeSelf);
+        }
+
+        public void ReplaceLinkWithDrunkCharacter()
+        {
+            LinkedObject = PlayerReference.Instance.PlayerDrunk;
+        }
+
+        public void ReplaceLinkWithNormalCharacter()
+        {
+            LinkedObject = PlayerReference.Instance.PlayerNormal;
+        }
     }
 }

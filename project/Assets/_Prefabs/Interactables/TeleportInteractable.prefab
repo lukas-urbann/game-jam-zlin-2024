@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 246224829744256982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.78, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5233222544483713937, guid: 971fb2bc86a171342a29f2b98c89ef2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.47
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 5233222544483713937, guid: 971fb2bc86a171342a29f2b98c89ef2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -136,6 +136,7 @@ MonoBehaviour:
   interactableSober: 1
   interactableDrunk: 1
   customIdentifier: {fileID: 11400000, guid: d235abf4587727542863cb8f79798c70, type: 2}
+  touchInteraction: 0
 --- !u!114 &5032153754459310295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseValue:
     identifier: {fileID: 11400000, guid: d235abf4587727542863cb8f79798c70, type: 2}
-  valueToCompareWith: 1
+  valueToCompareWith: -1
   OnMatch:
     m_PersistentCalls:
       m_Calls:

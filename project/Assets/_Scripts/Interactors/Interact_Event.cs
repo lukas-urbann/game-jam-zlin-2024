@@ -30,9 +30,8 @@ namespace Game.Interactors
         public void Interact()
         {
             if (!interactableDrunk && !interactableSober) return;
-            else if (!interactableSober && CustomIdentifier.Value == -1) return;
-            else if (!interactableDrunk && CustomIdentifier.Value == 1) return;
-
+            else if (!interactableSober && CustomIdentifier.Value == 1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == -1) return;
 
             if (requiredItemsToInteract.Count <= 0)
             {
@@ -66,6 +65,10 @@ namespace Game.Interactors
 
         public void InteractHighlight()
         {
+            if (!interactableDrunk && !interactableSober) return;
+            else if (!interactableSober && CustomIdentifier.Value == 1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == -1) return;
+
             highlightObject.SetActive(!highlightObject.activeSelf);
 
             if (touchInteraction)

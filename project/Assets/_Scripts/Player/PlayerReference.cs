@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
@@ -13,12 +12,10 @@ namespace Game
 
         private void Awake()
         {
-            Instance = this;
-        }
-
-        private void OnEnable()
-        {
-            Instance = this;
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(this);
         }
     }
 }
