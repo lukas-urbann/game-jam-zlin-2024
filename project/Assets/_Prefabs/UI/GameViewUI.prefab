@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1531543602139666967}
   - component: {fileID: 5806429930430240011}
   - component: {fileID: 1456546953930723087}
+  - component: {fileID: 6381672629132588297}
   m_Layer: 5
   m_Name: GameViewUI
   m_TagString: Untagged
@@ -177,6 +178,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6381672629132588297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016335265687430136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88234ef16a50aa647a32d74ae343170e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialLink: {fileID: 0}
+  LinkWithPlayerReferenceInstead: 0
 --- !u!1 &7232343543622654048
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +202,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1765023036691864922}
   - component: {fileID: 2683835689163279945}
+  - component: {fileID: 914465758298293765}
+  - component: {fileID: 4639156121027071313}
   m_Layer: 5
   m_Name: BeerCounter
   m_TagString: Untagged
@@ -239,3 +256,46 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &914465758298293765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232343543622654048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eeeb9ca98b39c545b5ea70d780c3342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beerType: {fileID: 11400000, guid: 197dcb4fd571dd342a2d68707add393f, type: 2}
+  stretchedPanel: {fileID: 1765023036691864922}
+  beerDisplayPrefab: {fileID: 6110459345066769710, guid: 52ab9467c1f3f5945a3bbec4405ed3db, type: 3}
+--- !u!114 &4639156121027071313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232343543622654048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9c3c0d2cfb53c4aa91e84e9ce7806f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ef1d9633446ab6e4f9cbdc1c42c35bef, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 914465758298293765}
+        m_TargetAssemblyTypeName: Game.BeerCounter, Assembly-CSharp
+        m_MethodName: UpdateDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
