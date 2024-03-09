@@ -10,7 +10,6 @@ namespace Game
     {
         public GameObject InitialLink;
         private ILinkable[] links;
-        public bool LinkWithPlayerReferenceInstead = false;
 
         private void OnEnable()
         {
@@ -19,13 +18,6 @@ namespace Game
             if (!InitialLink)
             {
                 InitialLink = this.gameObject;
-
-                if (LinkWithPlayerReferenceInstead)
-                 {
-                    Debug.Log(PlayerReference.Instance.name);
-                    InitialLink = PlayerReference.Instance.Player;
-                }
-                    
             }
 
             foreach (ILinkable link in links)
