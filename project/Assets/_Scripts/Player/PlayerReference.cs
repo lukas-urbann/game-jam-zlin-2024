@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Game
+{
+    public class PlayerReference : MonoBehaviour
+    {
+        public static PlayerReference Instance;
+        public GameObject Player;
+        
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+        private void OnEnable()
+        {
+            Instance = this;
+        }
+    }
+}
