@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,23 @@ namespace Game.Interactors
         public bool TouchInteraction { get { return touchInteraction; } }
 
         public bool canInteract = true;
+        public bool disableOnStartAfterLink = false;
+
+        public void Start()
+        {
+            if (disableOnStartAfterLink)
+                StartCoroutine(DisableSelf());
+        }
+
+        private IEnumerator DisableSelf()
+        {
+            yield return new WaitForEndOfFrame();
+            if (disableOnStartAfterLink )
+            {
+                gameObject.SetActive( false );
+            }
+        }
+
         public void Enable()
         {
             canInteract = true;
