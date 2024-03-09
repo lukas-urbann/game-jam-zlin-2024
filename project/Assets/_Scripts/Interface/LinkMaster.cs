@@ -21,7 +21,11 @@ namespace Game
                 InitialLink = this.gameObject;
 
                 if (LinkWithPlayerReferenceInstead)
+                 {
+                    Debug.Log(PlayerReference.Instance.name);
                     InitialLink = PlayerReference.Instance.Player;
+                }
+                    
             }
 
             foreach (ILinkable link in links)
