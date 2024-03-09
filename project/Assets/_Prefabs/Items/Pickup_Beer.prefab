@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7558059836905096785, guid: 6d04ac08375033545b793b13731e63d1, type: 3}
       propertyPath: interactableDrunk
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7558059836905096785, guid: 6d04ac08375033545b793b13731e63d1, type: 3}
       propertyPath: interactableSober

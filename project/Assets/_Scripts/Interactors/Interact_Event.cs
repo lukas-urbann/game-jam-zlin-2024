@@ -65,6 +65,10 @@ namespace Game.Interactors
 
         public void InteractHighlight()
         {
+            if (!interactableDrunk && !interactableSober) return;
+            else if (!interactableSober && CustomIdentifier.Value == 1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == -1) return;
+
             highlightObject.SetActive(!highlightObject.activeSelf);
 
             if (touchInteraction)

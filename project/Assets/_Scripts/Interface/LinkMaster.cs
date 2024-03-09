@@ -11,15 +11,21 @@ namespace Game
         public GameObject InitialLink;
         private ILinkable[] links;
 
-        private void OnEnable()
+        private void Start()
         {
             links = GetComponentsInChildren<ILinkable>();
 
             if (!InitialLink)
             {
-                InitialLink = this.gameObject;
+                InitialLink = PlayerReference.Instance.Player;
             }
 
+            foreach (ILinkable link in links)
+                link.Link(InitialLink);
+        }
+
+        public void ChciDomu()
+        {
             foreach (ILinkable link in links)
                 link.Link(InitialLink);
         }
