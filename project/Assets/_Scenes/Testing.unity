@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedEvent: {fileID: 11400000, guid: 69705780f2fbf184c8ba389a844ed6b3, type: 2}
-  disableAfterInvoke: 1
+  disableAfterInvoke: 0
 --- !u!61 &584269521 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
@@ -1344,136 +1344,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1112958717 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 25114569983542901, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-  m_PrefabInstance: {fileID: 8308011777291185151}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1112958718 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3000548910749403816, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-  m_PrefabInstance: {fileID: 8308011777291185151}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112958717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00cd56ac82ec37442818a69d2eacf5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1112958721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112958717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0e94d02c12065d4798453ffd940e048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseValue:
-    identifier: {fileID: 11400000, guid: d235abf4587727542863cb8f79798c70, type: 2}
-  valueToCompareWith: 1
-  OnMatch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1112958718}
-        m_TargetAssemblyTypeName: RealitySwitchHotkey, Assembly-CSharp
-        m_MethodName: ChangeSwitch
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnDifference:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1112958718}
-        m_TargetAssemblyTypeName: RealitySwitchHotkey, Assembly-CSharp
-        m_MethodName: ChangeSwitch
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1112958722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112958717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9c3c0d2cfb53c4aa91e84e9ce7806f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: f39283fbee3c1f1418b9431ac6b798fc, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1112958721}
-        m_TargetAssemblyTypeName: Game.VariableReferenceComparator, Assembly-CSharp
-        m_MethodName: Compare
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1112958723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112958717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9c3c0d2cfb53c4aa91e84e9ce7806f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 69705780f2fbf184c8ba389a844ed6b3, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1112958718}
-        m_TargetAssemblyTypeName: RealitySwitchHotkey, Assembly-CSharp
-        m_MethodName: Switch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1112958724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112958717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88234ef16a50aa647a32d74ae343170e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitialLink: {fileID: 786734378}
 --- !u!1 &1184210288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,6 +3136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialLink: {fileID: 786734378}
+  LinkWithPlayerReferenceInstead: 0
 --- !u!1001 &8308011777291185151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,10 +3149,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RealitySwitchHotkey
       objectReference: {fileID: 0}
-    - target: {fileID: 3000548910749403816, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-      propertyPath: beer
+    - target: {fileID: 382596303527507270, guid: 490a9289581553b478898e294d9f22c1, type: 3}
+      propertyPath: InitialLink
       value: 
-      objectReference: {fileID: 11400000, guid: 197dcb4fd571dd342a2d68707add393f, type: 2}
+      objectReference: {fileID: 786734378}
+    - target: {fileID: 382596303527507270, guid: 490a9289581553b478898e294d9f22c1, type: 3}
+      propertyPath: LinkWithPlayerReferenceInstead
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5948291256343394012, guid: 490a9289581553b478898e294d9f22c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.231375
@@ -3325,19 +3200,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 25114569983542901, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1112958722}
-    - targetCorrespondingSourceObject: {fileID: 25114569983542901, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1112958721}
-    - targetCorrespondingSourceObject: {fileID: 25114569983542901, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1112958723}
-    - targetCorrespondingSourceObject: {fileID: 25114569983542901, guid: 490a9289581553b478898e294d9f22c1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1112958724}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 490a9289581553b478898e294d9f22c1, type: 3}
 --- !u!1001 &8699634182635513340
 PrefabInstance:

@@ -24,7 +24,7 @@ public class RealitySwitchHotkey : MonoBehaviour, ILinkable
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -50,6 +50,9 @@ public class RealitySwitchHotkey : MonoBehaviour, ILinkable
 
     public void Switch()
     {
+        if (inventory.GetCount(beer) <= 0)
+            return;
+
         GetComponent<CustomEventRaiser>().InvokeEvent();
         inventory.RemoveFromInventory(beer);
     }
