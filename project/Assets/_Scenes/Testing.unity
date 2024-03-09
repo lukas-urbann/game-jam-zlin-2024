@@ -696,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5185111191030014483, guid: 5a1aba7bff7621b4abe6e844220c3748, type: 3}
       propertyPath: smoothTime
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981633311262741552, guid: 5a1aba7bff7621b4abe6e844220c3748, type: 3}
       propertyPath: m_LocalPosition.x
@@ -871,7 +871,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 698922643525189945, guid: bdd808f04a4751242840cf40f8f4b427, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 761545752554506168, guid: bdd808f04a4751242840cf40f8f4b427, type: 3}
       propertyPath: m_Name
