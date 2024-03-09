@@ -15,9 +15,15 @@ namespace Game.Interactors
         public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
         public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
         public List<ItemType> RequiredItemsToInteract { get => null; }
+        public ValueIdentifier CustomIdentifier { get { return customIdentifier; } }
+        public ValueIdentifier customIdentifier;
 
         public void Interact()
         {
+            if (!interactableDrunk && !interactableSober) return;
+            else if (!interactableSober && CustomIdentifier.Value == -1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == 1) return;
+
             inventory.AddToInventory(itemToGive);
             StartCoroutine(Collected());
         }

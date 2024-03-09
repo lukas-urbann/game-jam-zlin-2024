@@ -8,7 +8,9 @@ namespace Game
     {
         public static PlayerReference Instance;
         public GameObject Player;
-        
+        public GameObject PlayerNormal;
+        public GameObject PlayerDrunk;
+
         private void Awake()
         {
             Instance = this;

@@ -14,13 +14,22 @@ namespace Game.Interactors
         public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
         public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
         public List<ItemType> RequiredItemsToInteract { get => null; }
+        public ValueIdentifier CustomIdentifier { get { return customIdentifier; } }
+        public ValueIdentifier customIdentifier;
 
         public void Interact()
         {
+            if (!interactableDrunk && !interactableSober) return;
+            else if (!interactableSober && CustomIdentifier.Value == -1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == 1) return;
+
             if (!LinkedObject) return;
             LinkedObject.transform.position = PositionToTeleport.transform.position;
         }
         public void SaveLinkReference(GameObject masterObject) => LinkedObject = masterObject;
         public void InteractHighlight() => highlightObject.SetActive(!highlightObject.activeSelf);
+    
+        public void ReplaceLinkWithDrunkCharacter() => LinkedObject = PlayerReference.Instance.PlayerDrunk;
+        public void ReplaceLinkWithNormalCharacter() => LinkedObject = PlayerReference.Instance.PlayerNormal;
     }
 }

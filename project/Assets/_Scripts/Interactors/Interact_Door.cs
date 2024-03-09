@@ -16,6 +16,9 @@ namespace Game
         public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
         public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
         public List<ItemType> RequiredItemsToInteract { get { return requiredItemsToInteract; } }
+        public ValueIdentifier CustomIdentifier { get { return customIdentifier; } }
+        public ValueIdentifier customIdentifier;
+
         [SerializeField] List<ItemType> requiredItemsToInteract = new();
 
         public UnityEvent InteractionWithoutKey;
@@ -23,6 +26,10 @@ namespace Game
 
         public void Interact()
         {
+            if (!interactableDrunk && !interactableSober) return;
+            else if (!interactableSober && CustomIdentifier.Value == -1) return;
+            else if (!interactableDrunk && CustomIdentifier.Value == 1) return;
+
             if (requiredItemsToInteract.Count <= 0)
             {
                 StartCoroutine(Open());

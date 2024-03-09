@@ -5,6 +5,7 @@ namespace Game
 {
     public interface IInteractable
     {
+        ValueIdentifier CustomIdentifier { get; }
         bool InteractableSober { get; set; }
         bool InteractableDrunk { get; set; }
         List<ItemType> RequiredItemsToInteract {  get; }
