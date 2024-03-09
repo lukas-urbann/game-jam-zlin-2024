@@ -16,6 +16,8 @@ namespace Game.Interactors
         public List<ItemType> RequiredItemsToInteract { get => null; }
         public ValueIdentifier CustomIdentifier { get { return realityIdentifier; } }
         public ValueIdentifier realityIdentifier;
+        public bool touchInteraction = false;
+        public bool TouchInteraction { get { return touchInteraction; } }
 
         public void Interact()
         {

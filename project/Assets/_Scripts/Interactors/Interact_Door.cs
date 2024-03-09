@@ -23,6 +23,8 @@ namespace Game
 
         public UnityEvent InteractionWithoutKey;
         public UnityEvent InteractionWithKey;
+        public bool touchInteraction = false;
+        public bool TouchInteraction { get { return touchInteraction; } }
 
         public void Interact()
         {

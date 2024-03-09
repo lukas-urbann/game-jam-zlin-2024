@@ -11,6 +11,7 @@ namespace Game
         List<ItemType> RequiredItemsToInteract {  get; }
         public void InteractHighlight();
         public void Interact();
+        public bool TouchInteraction {  get; }
     }
 
     /*

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,8 +14,15 @@ namespace Game
 
         public void Compare()
         {
+            StartCoroutine(DelayedCompare());
+        }
+
+        public IEnumerator DelayedCompare()
+        {
+            yield return new WaitForEndOfFrame();
+
             if (baseValue == null)
-                return;
+                yield break;
 
             if (valueToCompareWith == baseValue.Value)
                 OnMatch?.Invoke();

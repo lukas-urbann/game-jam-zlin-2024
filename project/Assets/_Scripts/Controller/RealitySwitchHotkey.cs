@@ -1,14 +1,23 @@
 using Game;
 using Game.Controller;
+using Game.Systems;
 using UnityEngine;
 
 /// <summary>
 /// We can restart the game, yay. 
 /// </summary>
 [RequireComponent(typeof(CustomEventRaiser))]
-public class RealitySwitchHotkey : MonoBehaviour
+public class RealitySwitchHotkey : MonoBehaviour, ILinkable
 {
+    InventoryHolder inventory;
+    public ItemType beer;
     private static RealitySwitchHotkey instance;
+    bool canSwitch = true;
+
+    public void ChangeSwitch(bool val)
+    {
+        canSwitch = val;
+    }
 
     private void Awake()
     {
@@ -35,7 +44,18 @@ public class RealitySwitchHotkey : MonoBehaviour
     {
         if (!enabled) return; //I don't trust unity
 
-        if (Input.GetKeyDown(KeyCode.F))
-            GetComponent<CustomEventRaiser>().InvokeEvent();
+        if (Input.GetKeyDown(KeyCode.F) && canSwitch)
+            Switch();
+    }
+
+    public void Switch()
+    {
+        GetComponent<CustomEventRaiser>().InvokeEvent();
+        inventory.RemoveFromInventory(beer);
+    }
+
+    public void SaveLinkReference(GameObject masterObject)
+    {
+        inventory = masterObject.GetComponent<InventoryHolder>();
     }
 }
