@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialLink: {fileID: 6977405556261110529}
+  LinkWithPlayerReferenceInstead: 0
 --- !u!114 &3411905231713110033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac0229140dccaf40b20ada7272e8fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryUpdateEvent: {fileID: 11400000, guid: ef1d9633446ab6e4f9cbdc1c42c35bef, type: 2}
   Items: []
 --- !u!114 &3822166275339309133
 MonoBehaviour:

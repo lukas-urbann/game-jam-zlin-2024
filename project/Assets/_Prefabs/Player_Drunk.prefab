@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8156397095789338129}
   - component: {fileID: 7418024377204573117}
   - component: {fileID: 1802247842822235770}
+  - component: {fileID: 8601008549356991851}
   m_Layer: 0
   m_Name: Player_Drunk
   m_TagString: Player
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialLink: {fileID: 0}
+  LinkWithPlayerReferenceInstead: 0
 --- !u!114 &1802247842822235770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +144,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1e79d1ca1820d48bbeab9a7441c121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8601008549356991851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601265584643980185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb87ef04b055eca458dc105ea4dc6ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &3623392042328836162
 GameObject:
   m_ObjectHideFlags: 0
