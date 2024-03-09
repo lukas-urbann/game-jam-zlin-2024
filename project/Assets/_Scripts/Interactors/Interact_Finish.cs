@@ -8,9 +8,10 @@ namespace Game.Interactors
         [SerializeField] GameObject highlightObject;
         [SerializeField] string NewSceneName;
 
-        public bool SoberInteraction = true;
-        public bool DrunkInteraction = false;
-
+        [SerializeField] bool interactableSober = false;
+        [SerializeField] bool interactableDrunk = false;
+        public bool InteractableSober { get { return interactableSober; } set { interactableSober = value; } }
+        public bool InteractableDrunk { get { return interactableDrunk; } set { interactableDrunk = value; } }
 
         public void Interact()
         {

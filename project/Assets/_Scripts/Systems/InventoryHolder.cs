@@ -9,6 +9,7 @@ namespace Game.Systems
         public List<ItemType> Items = new();
         public void AddToInventory(ItemType item) => Items.Add(item);
         public void RemoveFromInventory(ItemType item) => Items.Remove(item);
+        public bool CheckForItem(ItemType item) => Items.Contains(item);
     }
 }
 
