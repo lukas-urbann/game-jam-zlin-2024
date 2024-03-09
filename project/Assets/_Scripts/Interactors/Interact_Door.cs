@@ -18,15 +18,15 @@ namespace Game
         public List<ItemType> RequiredItemsToInteract { get { return requiredItemsToInteract; } }
         [SerializeField] List<ItemType> requiredItemsToInteract = new();
 
-        public UnityEvent openWithoutKey;
-        public UnityEvent openWithKey;
+        public UnityEvent InteractionWithoutKey;
+        public UnityEvent InteractionWithKey;
 
         public void Interact()
         {
             if (requiredItemsToInteract.Count <= 0)
             {
                 StartCoroutine(Open());
-                openWithKey?.Invoke();
+                InteractionWithKey?.Invoke();
                 return;
             }
             else if (CheckForAllItems())
@@ -35,12 +35,12 @@ namespace Game
                 {
                     inventory.RemoveFromInventory(item);
                     StartCoroutine(Open());
-                    openWithKey?.Invoke();
+                    InteractionWithKey?.Invoke();
                 }
             }
             else
             {
-                openWithoutKey?.Invoke();
+                InteractionWithoutKey?.Invoke();
             }    
         }
 
@@ -58,7 +58,7 @@ namespace Game
         private IEnumerator Open()
         {
             yield return new WaitForEndOfFrame();
-            openWithKey?.Invoke();
+            InteractionWithKey?.Invoke();
         }
 
         public void InteractHighlight() => highlightObject.SetActive(!highlightObject.activeSelf);
