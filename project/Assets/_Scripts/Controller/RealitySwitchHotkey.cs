@@ -45,14 +45,16 @@ public class RealitySwitchHotkey : MonoBehaviour, ILinkable
         if (!enabled) return; //I don't trust unity
 
         if (Input.GetKeyDown(KeyCode.F) && canSwitch)
+        {
+            if (inventory.GetCount(beer) <= 0)
+                return;
+
             Switch();
+        }
     }
 
     public void Switch()
     {
-        if (inventory.GetCount(beer) <= 0)
-            return;
-
         GetComponent<CustomEventRaiser>().InvokeEvent();
         inventory.RemoveFromInventory(beer);
     }
