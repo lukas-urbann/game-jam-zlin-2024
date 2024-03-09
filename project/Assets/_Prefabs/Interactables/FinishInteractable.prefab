@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5233222544483713937, guid: 971fb2bc86a171342a29f2b98c89ef2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5410874
+      value: 14.53
       objectReference: {fileID: 0}
     - target: {fileID: 5233222544483713937, guid: 971fb2bc86a171342a29f2b98c89ef2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.10646966
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 5233222544483713937, guid: 971fb2bc86a171342a29f2b98c89ef2a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -88,3 +88,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightObject: {fileID: 498239071416016298}
   NewSceneName: Testing
+  interactableSober: 1
+  interactableDrunk: 1
+  realityIdentifier: {fileID: 11400000, guid: d235abf4587727542863cb8f79798c70, type: 2}
