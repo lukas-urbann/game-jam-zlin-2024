@@ -8,5 +8,6 @@ public class VariableReference
     public float Value
     {
         get { return identifier.Value; }
+        set { identifier.Value = value; }
     }
 }

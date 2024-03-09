@@ -89,6 +89,7 @@ MonoBehaviour:
   highlightObject: {fileID: 630035637349411464}
   interactableSober: 1
   interactableDrunk: 1
+  customIdentifier: {fileID: 11400000, guid: d235abf4587727542863cb8f79798c70, type: 2}
   requiredItemsToInteract: []
   InteractionWithoutItems:
     m_PersistentCalls:
