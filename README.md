@@ -26,8 +26,13 @@ SPACE - interact with objects
 ---------------------------
 
 Credits:
+
 Lukáš Urban
+
 S S
+
 Vít Švéda
+
 Štěpán Křikava
+
 Jakub Kramný
