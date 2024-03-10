@@ -5267,7 +5267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: NewSceneName
-      value: level3
+      value: level4
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: interactableDrunk
@@ -10585,6 +10585,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1283237090095189229, guid: 5a1aba7bff7621b4abe6e844220c3748, type: 3}
+      propertyPath: orthographic size
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283237090095189229, guid: 5a1aba7bff7621b4abe6e844220c3748, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
@@ -13030,11 +13034,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1200148505242973529, guid: 489c11b3de4ebbc42aa94cbc51c78117, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 35.36
       objectReference: {fileID: 0}
     - target: {fileID: 1200148505242973529, guid: 489c11b3de4ebbc42aa94cbc51c78117, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.23
       objectReference: {fileID: 0}
     - target: {fileID: 1200148505242973529, guid: 489c11b3de4ebbc42aa94cbc51c78117, type: 3}
       propertyPath: m_LocalPosition.z
