@@ -1,18 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemType : MonoBehaviour
+[CreateAssetMenu(fileName = "New Item Type", menuName = "Custom Objects/Item Type")]
+public class ItemType : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

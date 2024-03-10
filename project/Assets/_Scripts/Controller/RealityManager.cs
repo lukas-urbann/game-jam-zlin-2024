@@ -6,7 +6,24 @@ namespace Game
 {
     public class RealityManager : MonoBehaviour
     {
-        
+        [Header("set -1 for drunk and 1 for normal!")]
+        public VariableReference realityValueReference;
+        public CustomEvent RealitySwitchEvent;
+
+        private void Start()
+        {
+            realityValueReference.Value = 0;
+            RealitySwitchEvent.Raise();
+        }
+
+        /// <summary>
+        /// Not a good idea, be we have no other choice for now.
+        /// </summary>
+        public void Switch()
+        {
+            realityValueReference.Value = realityValueReference.Value == 1 ? -1 : 1;
+            Debug.Log("Reality switch invoked. Value: " + realityValueReference.Value);
+        }
     }
 }
 
