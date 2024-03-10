@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   color:
-    m_OverrideState: 0
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.4264151, g: 0.08286933, b: 0.08286933, a: 1}
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.574
+    m_Value: 0.623
   smoothness:
     m_OverrideState: 0
     m_Value: 0.2
@@ -81,10 +81,10 @@ MonoBehaviour:
     m_Value: 1
   focalLength:
     m_OverrideState: 1
-    m_Value: 25
+    m_Value: 52
   bladeCount:
     m_OverrideState: 0
-    m_Value: 5
+    m_Value: 9
   bladeCurvature:
     m_OverrideState: 0
     m_Value: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 62
+    m_Value: 43
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -137,10 +137,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -0
   intensity:
     m_OverrideState: 1
-    m_Value: 1.4
+    m_Value: 0.64
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -148,8 +148,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 65472
   tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.314421, b: 0, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
