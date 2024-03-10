@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace Game.Player
@@ -24,7 +25,7 @@ namespace Game.Player
                 if (!interactable.TouchInteraction) InteractablesInSight.Remove(interactable);
             }
         }
-        
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))

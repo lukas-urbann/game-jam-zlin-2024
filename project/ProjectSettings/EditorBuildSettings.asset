@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Testing.unity
     guid: 326ec6c31c2aef84ab60496eeb163b6e
-  - enabled: 1
-    path: Assets/_Scenes/Main/Menu.unity
-    guid: 6e73371ab0cb65341910170194d56978
   - enabled: 0
     path: Assets/_Scenes/Main/Outside.unity
     guid: 784c90621eb01be42905d50f55ea72fa
+  - enabled: 1
+    path: Assets/_Scenes/Main/Menu.unity
+    guid: 6e73371ab0cb65341910170194d56978
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: fbf81d5efd6ed9b40af976f45cec5e99
+  - enabled: 1
+    path: Assets/_Scenes/level0.unity
+    guid: d73e68b64cf2bfe47a747949d033b761
   - enabled: 1
     path: Assets/_Scenes/level1.unity
     guid: 6423112cf8aa1d24596a774ab9f350ad
@@ -21,11 +27,8 @@ EditorBuildSettings:
     path: Assets/_Scenes/level3.unity
     guid: ccd98c5088979064f8a28e79c646cdc8
   - enabled: 1
-    path: Assets/_Scenes/level0.unity
-    guid: d73e68b64cf2bfe47a747949d033b761
-  - enabled: 1
     path: Assets/_Scenes/levelfinal.unity
-    guid: fa5183b22dd20ca4e8aa1f0c6bec5b9c
+    guid: f327e455a51480a4c87f45d2c050a4ff
   - enabled: 1
     path: Assets/_Scenes/Main/Endgame.unity
     guid: 18759ee6a175f3248908ab88486b3db8

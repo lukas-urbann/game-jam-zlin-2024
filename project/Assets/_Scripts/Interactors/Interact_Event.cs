@@ -35,6 +35,7 @@ namespace Game.Interactors
 
             if (requiredItemsToInteract.Count <= 0)
             {
+                AudioSingleton.instance.PlaySoundOneShot(AudioSingleton.instance.interactSound);
                 InteractionWithItems?.Invoke();
                 return;
             }
@@ -42,6 +43,7 @@ namespace Game.Interactors
             {
                 foreach (var item in requiredItemsToInteract)
                 {
+                    AudioSingleton.instance.PlaySoundOneShot(AudioSingleton.instance.interactSound);
                     inventory.RemoveFromInventory(item);
                     InteractionWithItems?.Invoke();
                 }
@@ -74,7 +76,6 @@ namespace Game.Interactors
             if (touchInteraction)
                 Interact();
         }
-
         public void SaveLinkReference(GameObject masterObject) => inventory = masterObject.GetComponent<InventoryHolder>();
     }
 }

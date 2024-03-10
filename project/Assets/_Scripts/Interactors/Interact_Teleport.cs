@@ -57,6 +57,7 @@ namespace Game.Interactors
 
             if (!LinkedObject) return;
             LinkedObject.transform.position = PositionToTeleport.transform.position;
+            AudioSingleton.instance.PlaySoundOneShot(AudioSingleton.instance.interactSound);
         }
         public void SaveLinkReference(GameObject masterObject) => LinkedObject = masterObject;
         public void InteractHighlight()

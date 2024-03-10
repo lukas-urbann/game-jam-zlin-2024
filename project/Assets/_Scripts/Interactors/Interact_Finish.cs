@@ -25,7 +25,7 @@ namespace Game.Interactors
             else if (!interactableSober && CustomIdentifier.Value == -1) return;
             else if (!interactableDrunk && CustomIdentifier.Value == 1) return;*/
             //borked
-
+            AudioSingleton.instance.PlaySoundOneShot(AudioSingleton.instance.interactSound);
             SceneManagement.MoveToScene(NewSceneName);
         }
 
