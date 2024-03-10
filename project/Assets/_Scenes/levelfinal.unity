@@ -2808,7 +2808,7 @@ PrefabInstance:
     - target: {fileID: 3921062567028252075, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: InitialLink
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1546630119}
     - target: {fileID: 4271874497738724242, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.26
@@ -2875,11 +2875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: NewSceneName
-      value: Testing
+      value: Endgame
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: touchInteraction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: interactableDrunk
@@ -5140,11 +5140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6826559382522848906, guid: 155c7a4daa4c86d4e804b1de8c465f32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.26
+      value: -70.3
       objectReference: {fileID: 0}
     - target: {fileID: 6826559382522848906, guid: 155c7a4daa4c86d4e804b1de8c465f32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.79
+      value: 4.54
       objectReference: {fileID: 0}
     - target: {fileID: 6826559382522848906, guid: 155c7a4daa4c86d4e804b1de8c465f32, type: 3}
       propertyPath: m_LocalPosition.z

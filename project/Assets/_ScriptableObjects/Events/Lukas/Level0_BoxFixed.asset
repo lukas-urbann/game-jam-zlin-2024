@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b85f3db03278df4a866f416f4f5d823, type: 3}
-  m_Name: Player_Speed_Walk
+  m_Script: {fileID: 11500000, guid: 11d15b908b2bfc843ad4a8f8ce6625b0, type: 3}
+  m_Name: Level0_BoxFixed
   m_EditorClassIdentifier: 
-  Value: 15
