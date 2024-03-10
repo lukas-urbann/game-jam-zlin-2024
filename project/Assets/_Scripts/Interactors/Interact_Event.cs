@@ -74,7 +74,6 @@ namespace Game.Interactors
             if (touchInteraction)
                 Interact();
         }
-
         public void SaveLinkReference(GameObject masterObject) => inventory = masterObject.GetComponent<InventoryHolder>();
     }
 }
