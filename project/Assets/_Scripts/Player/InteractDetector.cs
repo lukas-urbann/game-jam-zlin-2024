@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace Game.Player
@@ -24,12 +25,14 @@ namespace Game.Player
                 if (!interactable.TouchInteraction) InteractablesInSight.Remove(interactable);
             }
         }
-        
+
+        public AudioClip interactSound;
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (InteractablesInSight.Count <= 0) return;
+                AudioSingleton.instance.PlaySoundOneShot(interactSound);
                 InteractablesInSight.ForEach(interactable =>
                 {
                     interactable.Interact();
