@@ -3833,7 +3833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: NewSceneName
-      value: level2
+      value: level3
       objectReference: {fileID: 0}
     - target: {fileID: 8243787664793452833, guid: ded4849353eb29f4d89d5ffa83465eb9, type: 3}
       propertyPath: interactableDrunk
