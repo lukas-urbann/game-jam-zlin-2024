@@ -32,6 +32,7 @@ namespace Game.Interactors
 
         private IEnumerator Collected()
         {
+            AudioSingleton.instance.PlaySoundOneShot(AudioSingleton.instance.interactSound);
             yield return new WaitForEndOfFrame();
             Destroy(gameObject);
         }

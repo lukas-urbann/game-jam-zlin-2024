@@ -53,10 +53,20 @@ public class RealitySwitchHotkey : MonoBehaviour, ILinkable
         }
     }
 
+    private bool takeBeer = true;
+    public void EnableBeerSwitch(bool enable)
+    {
+        takeBeer = enable;
+    }
+
     public void Switch()
     {
         GetComponent<CustomEventRaiser>().InvokeEvent();
-        inventory.RemoveFromInventory(beer);
+
+        if (takeBeer)
+        {
+            inventory.RemoveFromInventory(beer);
+        }
     }
 
     public void SaveLinkReference(GameObject masterObject)

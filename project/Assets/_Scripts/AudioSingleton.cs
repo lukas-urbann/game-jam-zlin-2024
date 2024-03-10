@@ -6,6 +6,7 @@ namespace Game
     {
         public static AudioSingleton instance;
         public AudioSource audioSource;
+        public AudioClip interactSound;
 
         private void Start()
         {

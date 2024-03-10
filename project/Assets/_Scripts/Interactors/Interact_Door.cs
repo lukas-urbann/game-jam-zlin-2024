@@ -66,6 +66,7 @@ namespace Game
 
         private IEnumerator Open()
         {
+            AudioSingleton.instance.PlaySoundOneShot(AudioSingleton.instance.interactSound);
             yield return new WaitForEndOfFrame();
             InteractionWithKey?.Invoke();
         }
