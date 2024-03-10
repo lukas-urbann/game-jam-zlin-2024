@@ -21954,7 +21954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: m_Size.x
-      value: 2.5534108
+      value: 2.3739066
       objectReference: {fileID: 0}
     - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: m_Size.y
@@ -21962,11 +21962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: m_Offset.x
-      value: -0.77670586
+      value: -0.30871522
       objectReference: {fileID: 0}
     - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: m_Offset.y
-      value: -0.17343904
+      value: -0.17343903
       objectReference: {fileID: 0}
     - target: {fileID: 4997155356302894023, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: requiredItemsToInteract.Array.size
@@ -22900,7 +22900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Neco
+  m_text: "Odtud nemohu p\u0159ekro\u010Dit tolik past\xED..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e889569bc589466438efc69c567972e4, type: 2}
   m_sharedMaterial: {fileID: 1228816903280478029, guid: e889569bc589466438efc69c567972e4, type: 2}

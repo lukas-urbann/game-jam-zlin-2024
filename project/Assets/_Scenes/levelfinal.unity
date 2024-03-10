@@ -6914,7 +6914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zdu\u0159 Franto! "
+  m_text: "Zdu\u0159 Franto!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e889569bc589466438efc69c567972e4, type: 2}
   m_sharedMaterial: {fileID: 1228816903280478029, guid: e889569bc589466438efc69c567972e4, type: 2}
@@ -7867,6 +7867,14 @@ PrefabInstance:
     - target: {fileID: 3091189843834863440, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3126724
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.15633622
       objectReference: {fileID: 0}
     - target: {fileID: 4052719011538430601, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: InitialLink

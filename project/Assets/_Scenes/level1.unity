@@ -16426,6 +16426,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6900136
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.690014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.34500694
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654027226282081611, guid: 97efd55277abcd743b3face49758f69a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.345007
+      objectReference: {fileID: 0}
     - target: {fileID: 4997155356302894023, guid: 97efd55277abcd743b3face49758f69a, type: 3}
       propertyPath: requiredItemsToInteract.Array.size
       value: 1
@@ -17254,7 +17270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "J\xE1 jsem Gener\xE1l, ahoj. Ob\u010Das se mi zamot\xE1 hlava kdy\u017E
-    vypiju fla\u0161ku a pak se objev\xEDm upln\u011B n\u011Bkde jinde..."
+    vypiju fla\u0161ku a pak se objev\xEDm v paralern\xED realit\u011B..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e889569bc589466438efc69c567972e4, type: 2}
   m_sharedMaterial: {fileID: 1228816903280478029, guid: e889569bc589466438efc69c567972e4, type: 2}

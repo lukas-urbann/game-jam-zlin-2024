@@ -5591,7 +5591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pivo
+  m_text: na, pivo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e889569bc589466438efc69c567972e4, type: 2}
   m_sharedMaterial: {fileID: 1228816903280478029, guid: e889569bc589466438efc69c567972e4, type: 2}
@@ -6942,7 +6942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2614180596310578615, guid: d76cab1574a6fda4db1d56d2d1e2a577, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.25
+      value: 7.501
       objectReference: {fileID: 0}
     - target: {fileID: 2614180596310578615, guid: d76cab1574a6fda4db1d56d2d1e2a577, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8554,7 +8554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pivo 2
+  m_text: pivo je zdravy tvl
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e889569bc589466438efc69c567972e4, type: 2}
   m_sharedMaterial: {fileID: 1228816903280478029, guid: e889569bc589466438efc69c567972e4, type: 2}
@@ -8960,6 +8960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Tomio
       objectReference: {fileID: 0}
+    - target: {fileID: 5599736625255987879, guid: 550fbc90d72d7fd4a9b205aaadae30eb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5955919910248743581, guid: 550fbc90d72d7fd4a9b205aaadae30eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -9011,6 +9015,14 @@ PrefabInstance:
     - target: {fileID: 5955919910248743581, guid: 550fbc90d72d7fd4a9b205aaadae30eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019309404842780707, guid: 550fbc90d72d7fd4a9b205aaadae30eb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526736602234246905, guid: 550fbc90d72d7fd4a9b205aaadae30eb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9692,6 +9704,18 @@ PrefabInstance:
     - target: {fileID: 3359844256917555449, guid: 89537f0dafc00ed45bc601fb9b923331, type: 3}
       propertyPath: m_Name
       value: NPC_General
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763872504673013573, guid: 89537f0dafc00ed45bc601fb9b923331, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967638069065991418, guid: 89537f0dafc00ed45bc601fb9b923331, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901886534212173744, guid: 89537f0dafc00ed45bc601fb9b923331, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8836262560510758843, guid: 89537f0dafc00ed45bc601fb9b923331, type: 3}
       propertyPath: m_LocalScale.x
@@ -10955,7 +10979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228063992071398034, guid: 4ac7d4990f5e4f747ab82f8ddfaf3a23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.849
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 6228063992071398034, guid: 4ac7d4990f5e4f747ab82f8ddfaf3a23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11284,7 +11308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: blah blah klic
+  m_text: tvl kde mam klic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e889569bc589466438efc69c567972e4, type: 2}
   m_sharedMaterial: {fileID: 1228816903280478029, guid: e889569bc589466438efc69c567972e4, type: 2}
